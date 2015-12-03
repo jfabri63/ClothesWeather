@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/TabFrag2"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/Recommander"
+            android:id="@+id/Haut"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:layout_weight="10"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:weightSum="100"
+            android:layout_weight="25"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ManteauVeste"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:id="@+id/hautvetement"
+                android:layout_weight="50"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:contentDescription="@string/Suggestion"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:layout_gravity="center"
+                android:id="@+id/imagevetementhaut"
+
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:weightSum="100"
+            android:layout_weight="25"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Haut"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:id="@+id/hautvetement2"
+                android:layout_weight="50"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:contentDescription="@string/Suggestion"
+                android:layout_gravity="center"
+                android:id="@+id/imagevetementhaut2"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:weightSum="100"
+            android:layout_weight="25"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Bas"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:id="@+id/bas"
+                android:layout_weight="50"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:contentDescription="@string/Suggestion"
+                android:layout_gravity="center"
+                android:id="@+id/imagevetementbas"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="15"
+            android:orientation="horizontal"
+            android:weightSum="100">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:id="@+id/pluieWarning"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:contentDescription="@string/Suggestion"
+                android:layout_gravity="center"
+                android:id="@+id/warning"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

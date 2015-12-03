@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Which cloths ?</string>
+    <string name="action_settings">About</string>
+    <string-array name="temps">
+        <item>Out less than 3 hours</item>
+        <item>Out less than 6 hours</item>
+        <item>Out less than 9 hours</item>
+        <item>Out whole day</item>
+    </string-array>
+    <string name="AutoCompleteText">Select a city</string>
+    <string name="BouttonAutoCompleteSave">Save</string>
+    <string name="Ville">City</string>
+    <string name="Actualiser">Refresh</string>
+    <string name="ImageViewDesc">WeatherImage</string>
+    <string name="Bas">Bottom</string>
+    <string name="Haut">Top</string>
+    <string name="ManteauVeste">Coat/Jacket</string>
+    <string name="Recommander">We suggest you :</string>
+    <string name="Suggestion">Suggestion</string>
+    <string name="AttentionBrouillard">Warning Fog</string>
+    <string name="AttentionNeige">Warning Snow</string>
+    <string name="AttentionPluie">Warning Rain</string>
+    <string name="AttentonOrage">Warning Storm</string>
+    <string name="AucuneVille">No city selected</string>
+    <string name="Chemise">Shirt</string>
+    <string name="ErreurChargement">Error Loading</string>
+    <string name="DessousHaut">Undertop</string>
+    <string name="HautAlternative">Alternative : </string>
+    <string name="Jeans">Jeans</string>
+    <string name="Manteau">Coat</string>
+    <string name="Nuageux">Cloudy</string>
+    <string name="PantalonChaud">Warm trousers</string>
+    <string name="PantalonLeger">Light trousers</string>
+    <string name="Parka">Parka</string>
+    <string name="ParkaPolaire">Arctic Coat/Parka</string>
+    <string name="PluieSoleil">Rain with sun</string>
+    <string name="Pourles">for</string>
+    <string name="Prevision">Forecast at </string>
+    <string name="Prochaine">next hours</string>
+    <string name="Pull">pullover</string>
+    <string name="QueFaire">What to do ?</string>
+    <string name="RisquePluie">Rain warning, we suggest you to take an umbrella</string>
+    <string name="SelectCity">Select a city</string>
+    <string name="Short">Shorts</string>
+    <string name="Soleil">There is sun</string>
+    <string name="SoleilNuage">There is sun with clouds</string>
+    <string name="SweatShirt">Sweatshirt</string>
+    <string name="Temps">Weather</string>
+    <string name="Tshirt">Tshirt</string>
+    <string name="Vetement">Cloths</string>
+</resources>

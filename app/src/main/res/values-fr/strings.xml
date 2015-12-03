@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Que porter ?</string>
+    <string name="action_settings">A propos</string>
+    <string-array name="temps">
+        <item>Sortir moins de 3 heures</item>
+        <item>Sortir moins de 6 heures</item>
+        <item>Sortir moins de 9 heures</item>
+        <item>Sortir toute la journée</item>
+    </string-array>
+    <string name="AutoCompleteText">Choisir une ville</string>
+    <string name="BouttonAutoCompleteSave">Sauvegarder</string>
+    <string name="Ville">Ville</string>
+    <string name="Actualiser">Actualiser</string>
+    <string name="ImageViewDesc">ImageduTemps</string>
+    <string name="Recommander">Nous recommendons :</string>
+    <string name="ManteauVeste">Manteau/Veste : </string>
+    <string name="Suggestion">Suggestion</string>
+    <string name="Haut">Haut : </string>
+    <string name="Bas">Bas : </string>
+    <string name="SelectCity">Choisir une ville</string>
+    <string name="QueFaire">Que faire ?</string>
+    <string name="AucuneVille">Aucune ville sélectionné</string>
+    <string name="Prevision">Prévision à </string>
+    <string name="Pourles"> pour les </string>
+    <string name="Prochaine"> prochaines heures</string>
+    <string name="Soleil">Il y a du soleil</string>
+    <string name="SoleilNuage">Il y a du soleil et des nuages</string>
+    <string name="Nuageux">C\'est nuageux</string>
+    <string name="AttentionPluie">Attention il y a de la pluie</string>
+    <string name="PluieSoleil">De la pluie avec du soleil</string>
+    <string name="AttentonOrage">Attention orages</string>
+    <string name="AttentionNeige">Attention neiges</string>
+    <string name="AttentionBrouillard">Attention brouillard</string>
+    <string name="ErreurChargement">Erreur de chargement</string>
+    <string name="ParkaPolaire">Parka/Polaire</string>
+    <string name="Pull">Pull</string>
+    <string name="DessousHaut">Dessous de Haut : </string>
+    <string name="Parka">Parka</string>
+    <string name="Manteau">Manteau</string>
+    <string name="SweatShirt">Sweatshirt</string>
+    <string name="Tshirt">Tshirt</string>
+    <string name="Chemise">Chemise</string>
+    <string name="Jeans">Jeans</string>
+    <string name="PantalonChaud">Pantalon chaud</string>
+    <string name="HautAlternative">Alternative/Haut : </string>
+    <string name="PantalonLeger">Pantalon Leger / Chinos</string>
+    <string name="Short">Short</string>
+    <string name="RisquePluie">Risque de pluie, on vous conseil de prendre un parapluie</string>
+    <string name="Temps">Temps</string>
+    <string name="Vetement">Vetement</string>
+</resources>
