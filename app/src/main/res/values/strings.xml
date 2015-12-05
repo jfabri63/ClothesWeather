@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Which cloths ?</string>
+    <string name="app_name">Which clothes ?</string>
     <string name="action_settings">About</string>
     <string-array name="temps">
-        <item>Out less than 3 hours</item>
-        <item>Out less than 6 hours</item>
-        <item>Out less than 9 hours</item>
-        <item>Out whole day</item>
+        <item>Going out less than 3 hours</item>
+        <item>Going out less than 6 hours</item>
+        <item>Going out less than 9 hours</item>
+        <item>Going out whole day</item>
     </string-array>
     <string name="AutoCompleteText">Select a city</string>
     <string name="BouttonAutoCompleteSave">Save</string>

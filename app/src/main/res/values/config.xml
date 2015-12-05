@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="OpenWeatherEndPoint">http://api.openweathermap.org/data/2.5/forecast?lat=</string>
+    <string name="KEYOpenWeather">6f38b1099567fec43b77a24f9448dcf3</string>
+    <string name="GoogleAutoplacePlaceId">https://maps.googleapis.com/maps/api/place/details/json?placeid=</string>
+    <string name="GoogleAutoPlaceLoc">https://maps.googleapis.com/maps/api/place/autocomplete/json</string>
+    <string name="KeyGoogleAPI">AIzaSyBB8yxmrnkmjDK0YrpgnQEI75AqOd0UTB0</string>
+
+
+</resources>

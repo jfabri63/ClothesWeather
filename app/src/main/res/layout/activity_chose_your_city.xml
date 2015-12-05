@@ -22,4 +22,10 @@
         android:id="@+id/buttonclick"
         android:layout_gravity="center"/>
 
+    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+        android:id="@+id/ProgressBar2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center" />
+
 </LinearLayout>

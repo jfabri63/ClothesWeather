@@ -1,7 +1,5 @@
 package com.example.foushi.myapplication;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -10,20 +8,24 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
+
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SharedPreferences pref = this.getSharedPreferences("MyPref", Context.MODE_PRIVATE);
-        String ville = pref.getString("ville", "Error");
-        if (ville.equals("Error"))
+        if (new PreferenceClass(this).getVille().equals("Error"))
         {
-            Intent i = new Intent(this, ChoseYourCity.class);
+            Intent i = new Intent(this, CityActivity.class);
             startActivity(i);
         }
         setContentView(R.layout.mainfragment);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        ButterKnife.bind(this);
         setSupportActionBar(toolbar);
         Fragment newFragment;
         newFragment = new ViewPageClass();
@@ -42,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
