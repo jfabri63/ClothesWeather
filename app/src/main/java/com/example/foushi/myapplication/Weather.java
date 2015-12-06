@@ -1,13 +1,13 @@
 package com.example.foushi.myapplication;
 
-public class Temps {
+public class Weather {
 
     protected String description;
     protected String code;
     protected double min;
     protected double max;
 
-    public Temps() {
+    public Weather() {
 
     }
 

@@ -23,15 +23,15 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.greenrobot.event.EventBus;
 
-public class Tab1 extends Fragment {
+public class TabWeather extends Fragment {
 
     public String ville;
     private int lastIndex;
-    public Temps[] predTemps;
+    public Weather[] predTemps;
     public int index;
     private EventBus bus = EventBus.getDefault();
 
-    public Tab1() {
+    public TabWeather() {
     }
 
 

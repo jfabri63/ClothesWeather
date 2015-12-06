@@ -1,9 +1,9 @@
 package com.example.foushi.myapplication;
 
 public class EventWeather {
-    Temps[] predTemps;
+    Weather[] predTemps;
 
-    public EventWeather(Temps[] p) {
+    public EventWeather(Weather[] p) {
         predTemps = p;
     }
 }

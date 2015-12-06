@@ -12,9 +12,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import de.greenrobot.event.EventBus;
 
-public class Tab2 extends Fragment {
+public class TabClothes extends Fragment {
 
-    public Tab2() {
+    public TabClothes() {
     }
 
     @Bind(R.id.hautvetement)

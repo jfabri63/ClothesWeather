@@ -47,9 +47,9 @@ public class ViewPageClass extends Fragment {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new Tab1();
+                    return new TabWeather();
                 case 1:
-                    return new Tab2();
+                    return new TabClothes();
             }
 
             return null;

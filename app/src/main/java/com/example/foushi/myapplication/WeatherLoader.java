@@ -21,7 +21,7 @@ public class WeatherLoader {
     Context context;
     private final Volley helper = Volley.getInstance();
     private EventBus bus = EventBus.getDefault();
-    Temps[] predTemps = {null, null, null, null};
+    Weather[] predTemps = {null, null, null, null};
     CircleProgressBar bar;
     int index;
 
@@ -148,7 +148,7 @@ public class WeatherLoader {
                                 if (i > index) {
                                     predTemps[i] = null;
                                 } else {
-                                    predTemps[i] = new Temps();
+                                    predTemps[i] = new Weather();
                                 }
 
                             }
