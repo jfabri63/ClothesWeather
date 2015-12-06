@@ -21,6 +21,7 @@ public class Volley extends Application {
     public static synchronized Volley getInstance() {
         return mInstance;
     }
+
     public RequestQueue getRequestQueue() {
         return mRequestQueue;
     }

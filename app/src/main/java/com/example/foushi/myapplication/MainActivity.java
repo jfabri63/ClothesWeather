@@ -1,4 +1,5 @@
 package com.example.foushi.myapplication;
+
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -19,8 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (new PreferenceClass(this).getVille().equals("Error"))
-        {
+        if (new PreferenceClass(this).getVille().equals("Error")) {
             Intent i = new Intent(this, CityActivity.class);
             startActivity(i);
         }
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Fragment newFragment;
         newFragment = new ViewPageClass();
-        FragmentManager fragmentManager =this.getSupportFragmentManager();
+        FragmentManager fragmentManager = this.getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.mContent, newFragment).commit();
     }
 
@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 
 
 }

@@ -4,8 +4,10 @@ public class Temps {
 
     protected String description;
     protected String code;
+    protected double min;
+    protected double max;
 
-    public Temps () {
+    public Temps() {
 
     }
 

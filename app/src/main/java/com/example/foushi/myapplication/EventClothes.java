@@ -13,9 +13,8 @@ public class EventClothes {
         return isRaining;
     }
 
-    public EventClothes(double m, boolean p)
-    {
-        moy=m;
-        isRaining =p;
+    public EventClothes(double m, boolean p) {
+        moy = m;
+        isRaining = p;
     }
 }

@@ -46,7 +46,7 @@ public class Tab2 extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         View v = getView();
-        ButterKnife.bind(this,v);
+        ButterKnife.bind(this, v);
         select = new SelectClothes(txt1, txt2, txt3, txt4, image1, image2, image3, warning, getContext());
         bus.register(this);
     }
@@ -65,8 +65,7 @@ public class Tab2 extends Fragment {
         super.onResume();
     }
 
-    public void test()
-    {
+    public void test() {
 
     }
 

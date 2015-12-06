@@ -5,7 +5,6 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -24,7 +23,7 @@ public class GooglePlacesAutocompleteAdapter extends ArrayAdapter implements Fil
     private final Volley helper = Volley.getInstance();
     private JSONObject rep;
 
-    private ArrayList<String> autocomplete (String input) {
+    private ArrayList<String> autocomplete(String input) {
         ArrayList<String> resultList = null;
         StringBuilder sb;
         String url = "";
@@ -32,20 +31,20 @@ public class GooglePlacesAutocompleteAdapter extends ArrayAdapter implements Fil
             sb = new StringBuilder(getContext().getResources().getString(R.string.GoogleAutoPlaceLoc));
             sb.append("?input=").append(URLEncoder.encode(input, "utf8"));
             sb.append("&types=(cities)");
-            sb.append("&key=" + getContext().getResources().getString(R.string.KeyGoogleAPI));
+            sb.append("&key=").append(getContext().getResources().getString(R.string.KeyGoogleAPI));
             url = sb.toString();
         } catch (Exception e) {
             Log.e(CityActivity.LOG_TAG, "Error processing Places API URL", e);
         }
         CustomJsonRequest request = new CustomJsonRequest
-                (Request.Method.GET,url, null, new Response.Listener<JSONObject>() {
+                (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
 
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            rep =response;
+                            rep = response;
                         } catch (Exception e) {
-                            Log.e(CityActivity.LOG_TAG,"Error");
+                            Log.e(CityActivity.LOG_TAG, "Error");
                         }
 
                     }
@@ -54,12 +53,11 @@ public class GooglePlacesAutocompleteAdapter extends ArrayAdapter implements Fil
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         error.printStackTrace();
-                      }
+                    }
                 });
         request.setPriority(Request.Priority.HIGH);
         helper.add(request);
-        if (rep!= null)
-        {
+        if (rep != null) {
             try {
                 JSONArray predsJsonArray = rep.getJSONArray("predictions");
                 resultList = new ArrayList<>(predsJsonArray.length());
@@ -79,6 +77,7 @@ public class GooglePlacesAutocompleteAdapter extends ArrayAdapter implements Fil
     public GooglePlacesAutocompleteAdapter(Context context, int textViewResourceId) {
         super(context, textViewResourceId);
     }
+
     @Override
     public int getCount() {
         return resultList1.size();

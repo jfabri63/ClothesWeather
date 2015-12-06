@@ -1,4 +1,5 @@
 package com.example.foushi.myapplication;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.astuetz.PagerSlidingTabStrip;
 
 public class ViewPageClass extends Fragment {
@@ -37,29 +39,34 @@ public class ViewPageClass extends Fragment {
 
     public class MyAdapter extends FragmentPagerAdapter { // Tab Adapter
 
-        public MyAdapter(FragmentManager fm) { super(fm); }
+        public MyAdapter(FragmentManager fm) {
+            super(fm);
+        }
 
         @Override
-        public Fragment getItem(int position)
-        {
-            switch (position){
-                case 0 : return new Tab1();
-                case 1 : return new Tab2();
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return new Tab1();
+                case 1:
+                    return new Tab2();
             }
 
             return null;
         }
 
         @Override
-        public int getCount() { return 2;}
+        public int getCount() {
+            return 2;
+        }
 
         @Override
         public CharSequence getPageTitle(int position) {
 
-            switch (position){
-                case 0 :
+            switch (position) {
+                case 0:
                     return getResources().getString(R.string.Temps);
-                case 1 :
+                case 1:
                     return getResources().getString(R.string.Vetement);
             }
             return null;
