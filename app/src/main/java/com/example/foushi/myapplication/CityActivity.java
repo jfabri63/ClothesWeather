@@ -27,7 +27,7 @@ public class CityActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chose_your_city);
+        setContentView(R.layout.activiy_city);
         preference = new PreferenceClass(this);
         ButterKnife.bind(this);
         bar.setColorSchemeResources(android.R.color.holo_blue_light);

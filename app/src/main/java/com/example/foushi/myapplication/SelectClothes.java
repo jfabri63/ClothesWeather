@@ -24,49 +24,49 @@ public class SelectClothes {
 
     public void VetementTemp(double temp, boolean pluie) {
         if (temp <= -10) {
-            txt1.setText(context.getResources().getString(R.string.ManteauVeste) + " " + context.getResources().getString(R.string.ParkaPolaire));
-            txt2.setText(context.getResources().getString(R.string.Haut) + " " + context.getResources().getString(R.string.Pull));
-            txt3.setText(context.getResources().getString(R.string.Bas) + " " + context.getResources().getString(R.string.PantalonChaud));
+            txt1.setText(context.getResources().getString(R.string.ManteauVeste) + " : " + context.getResources().getString(R.string.ParkaPolaire));
+            txt2.setText(context.getResources().getString(R.string.Haut) + " : " + context.getResources().getString(R.string.Pull));
+            txt3.setText(context.getResources().getString(R.string.Bas) + " : " + context.getResources().getString(R.string.PantalonChaud));
             image1.setImageResource(R.drawable.polar);
             image2.setImageResource(R.drawable.sweat);
             image3.setImageResource(R.drawable.polarpant);
         }
         if (temp <= 0 && temp > -10) {
-            txt1.setText(context.getResources().getString(R.string.Haut) + " " + context.getResources().getString(R.string.Parka));
-            txt2.setText(context.getResources().getString(R.string.DessousHaut) + " " + context.getResources().getString(R.string.Pull));
-            txt3.setText(context.getResources().getString(R.string.Bas) + " " + context.getResources().getString(R.string.PantalonChaud));
+            txt1.setText(context.getResources().getString(R.string.Haut) + " : " + context.getResources().getString(R.string.Parka));
+            txt2.setText(context.getResources().getString(R.string.DessousHaut) + " : " + context.getResources().getString(R.string.Pull));
+            txt3.setText(context.getResources().getString(R.string.Bas) + " : " + context.getResources().getString(R.string.PantalonChaud));
             image1.setImageResource(R.drawable.parka);
             image2.setImageResource(R.drawable.pullover);
             image3.setImageResource(R.drawable.polarpant);
         }
         if (temp <= 10 && temp > 0) {
-            txt1.setText(context.getResources().getString(R.string.Haut) + " " + context.getResources().getString(R.string.Manteau));
-            txt2.setText(context.getResources().getString(R.string.DessousHaut) + " " + context.getResources().getString(R.string.Pull));
-            txt3.setText(context.getResources().getString(R.string.Bas) + " " + context.getResources().getString(R.string.Jeans));
+            txt1.setText(context.getResources().getString(R.string.Haut) + " : " + context.getResources().getString(R.string.Manteau));
+            txt2.setText(context.getResources().getString(R.string.DessousHaut) + " : " + context.getResources().getString(R.string.Pull));
+            txt3.setText(context.getResources().getString(R.string.Bas) + " : " + context.getResources().getString(R.string.Jeans));
             image1.setImageResource(R.drawable.coat);
             image2.setImageResource(R.drawable.pullover);
             image3.setImageResource(R.drawable.jeans);
         }
         if (temp <= 20 && temp > 10) {
-            txt1.setText(context.getResources().getString(R.string.Haut) + " " + context.getResources().getString(R.string.SweatShirt));
-            txt2.setText(context.getResources().getString(R.string.DessousHaut) + " " + context.getResources().getString(R.string.Tshirt));
-            txt3.setText(context.getResources().getString(R.string.Bas) + " " + context.getResources().getString(R.string.Jeans));
+            txt1.setText(context.getResources().getString(R.string.Haut) + " : " + context.getResources().getString(R.string.SweatShirt));
+            txt2.setText(context.getResources().getString(R.string.DessousHaut) + " : " + context.getResources().getString(R.string.Tshirt));
+            txt3.setText(context.getResources().getString(R.string.Bas) + " : " + context.getResources().getString(R.string.Jeans));
             image1.setImageResource(R.drawable.sweat);
             image2.setImageResource(R.drawable.tshirt);
             image3.setImageResource(R.drawable.jeans);
         }
         if (temp <= 30 && temp > 20) {
-            txt1.setText(context.getResources().getString(R.string.Haut) + " " + context.getResources().getString(R.string.Chemise));
-            txt2.setText(context.getResources().getString(R.string.HautAlternative) + " " + context.getResources().getString(R.string.Chemise));
-            txt3.setText(context.getResources().getString(R.string.Bas) + " " + context.getResources().getString(R.string.PantalonLeger));
+            txt1.setText(context.getResources().getString(R.string.Haut) + " : " + context.getResources().getString(R.string.Chemise));
+            txt2.setText(context.getResources().getString(R.string.HautAlternative) + " : " + context.getResources().getString(R.string.Chemise));
+            txt3.setText(context.getResources().getString(R.string.Bas) + " : " + context.getResources().getString(R.string.PantalonLeger));
             image1.setImageResource(R.drawable.chemise);
             image2.setImageResource(R.drawable.tshirt);
             image3.setImageResource(R.drawable.chino);
         }
         if (temp > 30) {
-            txt1.setText(context.getResources().getString(R.string.Haut) + " " + context.getResources().getString(R.string.Chemise));
-            txt2.setText(context.getResources().getString(R.string.HautAlternative) + " " + context.getResources().getString(R.string.Tshirt));
-            txt3.setText(context.getResources().getString(R.string.Bas) + " " + context.getResources().getString(R.string.Short));
+            txt1.setText(context.getResources().getString(R.string.Haut) + " : " + context.getResources().getString(R.string.Chemise));
+            txt2.setText(context.getResources().getString(R.string.HautAlternative) + " : " + context.getResources().getString(R.string.Tshirt));
+            txt3.setText(context.getResources().getString(R.string.Bas) + " : " + context.getResources().getString(R.string.Short));
             image1.setImageResource(R.drawable.sweat);
             image2.setImageResource(R.drawable.tshirt);
             image3.setImageResource(R.drawable.shortpant);
