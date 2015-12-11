@@ -1,8 +1,8 @@
 # ClothesWeather
 
-![Screen1](appliScreen "Home of the application")
+![Screen1](appliScreen.png "Home of the application")
 
-![Screen2](appliScreen2 "Second tabs")
+![Screen2](appliScreen2.png "Second tabs")
 
 It's a simple application that show weather and what clothes you should wear according to the weather.
 This application is for user who don't have time to check weather in the morning or before going out and want a fast answer to questions like :
