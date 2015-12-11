@@ -23,7 +23,7 @@
             android:text="@string/Recommander"
             android:id="@+id/Haut"
             android:gravity="center_horizontal"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimary2"
             android:textSize="20sp"
             android:layout_weight="10"
             android:layout_gravity="center"
@@ -44,7 +44,7 @@
                 android:layout_gravity="center"
                 android:id="@+id/hautvetement"
                 android:layout_weight="50"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimary2"
                 />
 
             <ImageView
@@ -74,7 +74,7 @@
                 android:textSize="15sp"
                 android:id="@+id/hautvetement2"
                 android:layout_weight="50"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimary2"
                 />
 
             <ImageView
@@ -105,7 +105,7 @@
                 android:textSize="15sp"
                 android:id="@+id/bas"
                 android:layout_weight="50"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimary2"
                 />
 
             <ImageView
@@ -131,7 +131,7 @@
                 android:layout_gravity="center"
                 android:textSize="15sp"
                 android:id="@+id/pluieWarning"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimary2"
                 />
 
             <ImageView

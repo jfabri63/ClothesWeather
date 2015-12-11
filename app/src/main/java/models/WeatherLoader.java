@@ -1,13 +1,17 @@
-package com.example.foushi.myapplication;
+package models;
 
 
 import android.content.Context;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import volley.CustomJsonRequest;
+import com.example.foushi.myapplication.R;
+import volley.Volley;
 import com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar;
 
 import org.json.JSONObject;
@@ -18,12 +22,12 @@ import de.greenrobot.event.EventBus;
 
 public class WeatherLoader {
 
-    Context context;
+    public Context context;
     private final Volley helper = Volley.getInstance();
     private EventBus bus = EventBus.getDefault();
-    Weather[] predTemps = {null, null, null, null};
-    CircleProgressBar bar;
-    int index;
+    public Weather[] predTemps = {null, null, null, null};
+    public CircleProgressBar bar;
+    public int index;
 
 
     public WeatherLoader(Context context) {
@@ -248,17 +252,15 @@ public class WeatherLoader {
                             min = min - 273.15;
                             max = max - 273.15;
                             bus.post(new EventClothes(moy, pluie));
+                            preferences.setPluie(pluie);
+                            preferences.setTempMoy(moy);
                             predTemps[0].min = min;
                             predTemps[0].max = max;
                             bus.post(new EventWeather(predTemps));
-                            Log.i("TEST", "SA RENVOI");
-                            if (predTemps[0] == null) {
-                                Log.i("TEST", "C NULLLLL");
-                            }
-                            bar.setVisibility(CircleProgressBar.INVISIBLE);
 
                         } catch (Exception e) {
                             e.printStackTrace();
+                            bar.setVisibility(View.INVISIBLE);
                         }
 
                     }
@@ -267,7 +269,7 @@ public class WeatherLoader {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(context, context.getResources().getString(R.string.ErreurChargement), Toast.LENGTH_SHORT).show();
-                        bar.setVisibility(CircleProgressBar.INVISIBLE);
+                        bar.setVisibility(View.INVISIBLE);
                     }
                 });
 

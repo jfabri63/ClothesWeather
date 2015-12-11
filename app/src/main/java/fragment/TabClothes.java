@@ -1,4 +1,4 @@
-package com.example.foushi.myapplication;
+package fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,9 +8,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.foushi.myapplication.R;
+
+import models.PreferenceClass;
+import models.SelectClothes;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import de.greenrobot.event.EventBus;
+import models.EventClothes;
 
 public class TabClothes extends Fragment {
 
@@ -54,20 +60,12 @@ public class TabClothes extends Fragment {
     public void onEvent(EventClothes event) {
         select.VetementTemp(event.getMoy(), event.isRaining());
     }
-
     @Override
-    public void onStart() {
-        super.onStart();
-    }
-
-    @Override
-    public void onResume() {
+    public void onResume()
+    {
         super.onResume();
+        PreferenceClass preferences = new PreferenceClass(getContext());
+        select.VetementTemp(preferences.getTempMoy(),preferences.getPluie());
     }
-
-    public void test() {
-
-    }
-
 
 }

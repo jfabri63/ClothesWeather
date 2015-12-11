@@ -1,4 +1,4 @@
-package com.example.foushi.myapplication;
+package adapter;
 
 import android.content.Context;
 import android.util.Log;
@@ -9,6 +9,8 @@ import android.widget.Filterable;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import volley.CustomJsonRequest;
+import com.example.foushi.myapplication.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -16,6 +18,9 @@ import org.json.JSONObject;
 
 import java.net.URLEncoder;
 import java.util.ArrayList;
+
+import com.example.foushi.myapplication.CityActivity;
+import volley.Volley;
 
 
 public class GooglePlacesAutocompleteAdapter extends ArrayAdapter implements Filterable {

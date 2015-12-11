@@ -8,6 +8,11 @@ import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 
+import adapter.GooglePlacesAutocompleteAdapter;
+import de.greenrobot.event.EventBus;
+import models.EventCity;
+import models.PreferenceClass;
+import com.example.foushi.myapplication.R;
 import com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar;
 
 import java.util.ArrayList;
@@ -23,6 +28,8 @@ public class CityActivity extends AppCompatActivity implements AdapterView.OnIte
     PreferenceClass preference;
     public static ArrayList<String> placeid;
     boolean back;
+    private EventBus bus = EventBus.getDefault();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +75,8 @@ public class CityActivity extends AppCompatActivity implements AdapterView.OnIte
     public void click() {
         new PreferenceClass(this).setVille(autoCompView.getText().toString());
         new PreferenceClass(this).setPlace(place);
+        setResult(RESULT_OK);
+        bus.post(new EventCity());
         this.finish();
     }
 

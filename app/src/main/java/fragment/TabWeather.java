@@ -1,5 +1,6 @@
-package com.example.foushi.myapplication;
+package fragment;
 
+import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,22 +17,51 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.foushi.myapplication.CityActivity;
+import models.CustomSpinner;
+import models.EventCity;
+import models.PreferenceClass;
+import com.example.foushi.myapplication.R;
+import models.WeatherLoader;
 import com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.greenrobot.event.EventBus;
+import models.EventWeather;
+import models.Weather;
 
 public class TabWeather extends Fragment {
 
     public String ville;
-    private int lastIndex;
-    public Weather[] predTemps;
+    public int lastIndex;
+    public Weather[] predTemps = {null,null,null,null};
     public int index;
     private EventBus bus = EventBus.getDefault();
 
     public TabWeather() {
+    }
+
+   /* @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == Activity.RESULT_OK && requestCode == 100) {
+            bus.register(this);
+            ville = new PreferenceClass(getActivity()).getVille();
+            spinner.setSelection(0);
+            String text5 = getResources().getString(R.string.Prevision) + " " + ville + " " + getResources().getString(R.string.Pourles) + " " + (spinner.getSelectedItemPosition() + 1) * 3 + " " + getResources().getString(R.string.Prochaine);
+            textCity.setText(text5);
+            new WeatherLoader(getContext(), bar, 0).GetCoord();
+        }
+    }*/
+
+    public void onEvent (EventCity e)
+    {
+        ville = new PreferenceClass(getActivity()).getVille();
+        spinner.setSelection(0);
+        String text5 = getResources().getString(R.string.Prevision) + " " + ville + " " + getResources().getString(R.string.Pourles) + " " + (spinner.getSelectedItemPosition() + 1) * 3 + " " + getResources().getString(R.string.Prochaine);
+        textCity.setText(text5);
+        new WeatherLoader(getContext(), bar, 0).GetCoord();
     }
 
 
@@ -74,6 +104,7 @@ public class TabWeather extends Fragment {
         int index2 = (lastIndex + 1) * 3;
         textDesc.setText(preferences.getDesc() + " (" + index1 + "-" + index2 + "h)");
         textTemp.setText(temp);
+        Ratio.setText("1/1");
         bus.register(this);
     }
 
@@ -87,16 +118,17 @@ public class TabWeather extends Fragment {
         this.predTemps = ev.predTemps;
         updateWeather();
     }
-
+/*
     @Override
     public void onResume() {
         super.onResume();
+        bus.register(this);
         ville = new PreferenceClass(getActivity()).getVille();
         spinner.setSelection(0);
         String text5 = getResources().getString(R.string.Prevision) + " " + ville + " " + getResources().getString(R.string.Pourles) + " " + (spinner.getSelectedItemPosition() + 1) * 3 + " " + getResources().getString(R.string.Prochaine);
         textCity.setText(text5);
-        new WeatherLoader(getContext(), bar, 0).GetCoord();
-    }
+        //new WeatherLoader(getContext(), bar, 0).GetCoord();
+    }*/
 
     public void updateWeather() {
         PreferenceClass preferences = new PreferenceClass(getActivity());
@@ -119,24 +151,12 @@ public class TabWeather extends Fragment {
     TextView textDesc;
     @Bind(R.id.Text2)
     TextView textTemp;
-    @Bind(R.id.fab)
-    FloatingActionButton fab;
 
-    @OnClick(R.id.fab)
-    protected void click() {
-        CharSequence colors[] = new CharSequence[]{getResources().getString(R.string.SelectCity)};
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle(getResources().getString(R.string.QueFaire));
-        builder.setItems(colors, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                if (which == 0) {
-                    Intent i = new Intent(getActivity(), CityActivity.class);
-                    startActivity(i);
-                }
-            }
-        });
-        builder.show();
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+        bus.unregister(this);
     }
 
     @Bind(R.id.ProgressBar)

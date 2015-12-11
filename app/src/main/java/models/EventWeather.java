@@ -1,7 +1,9 @@
-package com.example.foushi.myapplication;
+package models;
+
+import models.Weather;
 
 public class EventWeather {
-    Weather[] predTemps;
+    public Weather[] predTemps;
 
     public EventWeather(Weather[] p) {
         predTemps = p;

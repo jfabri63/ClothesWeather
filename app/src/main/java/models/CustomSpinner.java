@@ -1,4 +1,4 @@
-package com.example.foushi.myapplication;
+package models;
 
 import android.content.Context;
 import android.util.AttributeSet;

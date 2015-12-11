@@ -1,9 +1,9 @@
-package com.example.foushi.myapplication;
+package models;
 
 
 public class EventClothes {
-    private double moy;
-    private boolean isRaining;
+    public double moy;
+    public boolean isRaining;
 
     public double getMoy() {
         return moy;

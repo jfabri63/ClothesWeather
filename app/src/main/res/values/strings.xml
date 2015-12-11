@@ -48,4 +48,6 @@
     <string name="Temps">Weather</string>
     <string name="Tshirt">Tshirt</string>
     <string name="Vetement">Clothes</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
 </resources>

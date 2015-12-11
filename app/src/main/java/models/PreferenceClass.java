@@ -1,4 +1,4 @@
-package com.example.foushi.myapplication;
+package models;
 
 
 import android.content.Context;
@@ -36,6 +36,28 @@ public class PreferenceClass {
 
     public String getLong() {
         return pref.getString("lng", "0");
+    }
+
+    public void setTempMoy(double temp)
+    {
+        editor.putFloat("tempmoy",(float)temp);
+        editor.apply();
+    }
+
+    public double getTempMoy ()
+    {
+        return pref.getFloat("tempmoy",0);
+    }
+
+    public void setPluie (boolean pluie)
+    {
+        editor.putBoolean("pluie", pluie);
+        editor.apply();
+    }
+
+    public boolean getPluie ()
+    {
+        return pref.getBoolean("pluie",false);
     }
 
     public void setDesc(String s) {

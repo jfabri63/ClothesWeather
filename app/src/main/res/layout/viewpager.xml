@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <!-- Does not need app:pstsTabPaddingLeftRight="26dp" or app:pstsTabTextSize="14sp"  -->
     <com.astuetz.PagerSlidingTabStrip

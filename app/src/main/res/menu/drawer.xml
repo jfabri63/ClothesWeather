@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/weather"
+            android:checked="false"
+            android:icon="@drawable/ic_weather_cloudy"
+            android:title="Prévision du temps" />
+
+        <item
+            android:id="@+id/extension"
+            android:checked="false"
+            android:icon="@drawable/ic_help"
+            android:title="Extension" />
+
+        <item
+            android:id="@+id/contact"
+            android:checked="false"
+            android:icon="@drawable/ic_contact_mail"
+            android:title="Contact" />
+
+    </group>
+</menu>
